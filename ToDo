@@ -1,0 +1,18 @@
+ToDo
+API
+- Bank of project names and descriptions
+
+Front-End (MVP)
+- Basic display with a "Generate" button; assigns a project at random to the user
+- This project is shown on an alternate display that enables a user to:
+    - see the project's name and description
+    - generate a new project if the current one is unsuitable
+
+Stack
+- Using Next.js since it's what I've primarily been working in, however this project seems perfect for learning a new lang, lib or fwork
+- For MVP, the API will be a local json object
+
+Stretch Goals
+- Make data more detailed for ability to filter beyond preferences
+- Separate API into its own repo and display for public use
+    -   Once this is done, use SWR to handle
