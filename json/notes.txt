@@ -1,0 +1,27 @@
+-------
+Summary
+-------
+Generally, I plan in a tidy way. This usually means using my .gitignore file and ensuring that the the curtain remains fully drawn
+between the world and my ramblings, however since I'm designing and creating an API that's for public consumption I figure that I 
+can use this file almost as the living development of a README so that anyone can see the process that I (rightly or wrongly) go
+through to get to the finish line. 
+------------------
+JSON Object Design
+------------------
+Primary: Data required by all projects
+id: num;
+name: str; 
+description: str;
+
+Secondary: Data likely to be used in filtering of projects (see stretch goals in todo)
+type: str; <------- front end; full stack etc.
+tech: str; <------- JS; React; SASS etc.
+
+Extras: Ancilliary pieces that either form the basis of or provide support for a given project
+api: {name: str; url: str}; 
+imageSite: {name: str; url: str}; 
+exampleSite: {name: str, url: str};
+library: {name: str, url: str};
+tutorial: {name: str, url: str};
+article: {name: str, url: str};
+
