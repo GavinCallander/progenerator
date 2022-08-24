@@ -1,0 +1,20 @@
+{
+    "projects": [
+        {
+            "name": "One",
+            "desc": "A project"
+        },
+        {
+            "name": "Two",
+            "desc": "Another project"
+        },
+        {
+            "name": "Three",
+            "desc": "A third project"
+        },
+        {
+            "name": "Four",
+            "desc": "Because why not a fourth"
+        }
+    ]
+}
