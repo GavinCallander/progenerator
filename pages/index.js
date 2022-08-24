@@ -10,6 +10,8 @@ export default function Index() {
   // this is useful in preventing duplicate suggestions as new generations can be checked against previous ones
   // with duplicates being rejected
   const [generatedProjects, setGeneratedProjects] = useState([]);
+  // define currentProject for later use
+  let currentProject = {...generatedProjects[generatedProjects.length-1]};
 
   // function to generate a single project from the fetched data
   const generateProject = () => {
@@ -50,8 +52,8 @@ export default function Index() {
         <p>Generate your next project idea now</p>
       </header>
       <main>
-        <p></p>
-        <p></p>
+        <p>{currentProject.name}</p>
+        <p>{currentProject.desc}</p>
         <button onClick={generateProject}>Generate</button>
       </main>
       <footer>
