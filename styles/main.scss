@@ -1,6 +1,35 @@
 html, body {
-    margin: none;
-    padding: none;
+    margin: 0;
+    padding: 0;
+}
+body {
+    
+}
+
+footer, header, main {
+    display: flex;
+    width: 100vw;
+}
+footer {
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+header, main {
+    padding: 0 1rem;
+    flex-direction: column;
+    height: 45vh;
+}
+header {
+    justify-content: flex-end;
+}
+main {
+    justify-content: flex-start;
+}
+
+button {
+    width: 50%;
+    font-size: 1.5rem;
 }
 
 * {

@@ -11,17 +11,16 @@ export default function Index() {
 
   return (
     <div>
-      <h1>My projects</h1>
-        {
-          data.projects.map((project, i) => {
-            return (
-                <div key={i}>
-                  <p>{project.name}</p>
-                  <p>{project.desc}</p>
-                </div>
-              )
-          })
-        }
+      <header>
+        <h1>Progenerator</h1>
+        <p>Generate your next project idea now</p>
+      </header>
+      <main>
+        <button>Generate</button>
+      </main>
+      <footer>
+        <p>All rights reserved GCWebDev 2022</p>
+      </footer>
     </div>
   )
 };
