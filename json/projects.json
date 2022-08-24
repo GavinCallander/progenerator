@@ -1,18 +1,22 @@
 {
     "projects": [
         {
+            "id": 0,
             "name": "One",
             "desc": "A project"
         },
         {
+            "id": 1,
             "name": "Two",
             "desc": "Another project"
         },
         {
+            "id": 2,
             "name": "Three",
             "desc": "A third project"
         },
         {
+            "id": 3,
             "name": "Four",
             "desc": "Because why not a fourth"
         }
