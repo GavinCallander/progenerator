@@ -2,23 +2,216 @@
     "projects": [
         {
             "id": 0,
-            "name": "One",
-            "desc": "A project"
+            "name": "Movie Ranker",
+            "description": "An application that allows users to rank and see their top movies. Using an API such as the one below may be of help.",
+            "type": ["Full Stack"],
+            "tech": ["API"],
+            "resources": [
+                {
+                    "name": "The Movie Database API",
+                    "url": "http://tmdb.org"
+                }
+            ]
         },
         {
             "id": 1,
-            "name": "Two",
-            "desc": "Another project"
+            "name": "Inspire Me",
+            "description": "An application that allows users to create their own inspirational quotes image. Using one of the free stock image services outlined belwo may help you get started.",
+            "type": ["Front End"],
+            "tech": [],
+            "resources": [
+                {
+                    "name": "Free stock images list",
+                    "url": "https://gist.github.com/MWins/1773ff0c38e7d88d1422"
+                }
+            ]
         },
         {
             "id": 2,
-            "name": "Three",
-            "desc": "A third project"
+            "name": "Gist Clone",
+            "description": "An application that allows users to create page content using markdown in a manner similar to Gist. See the link before for more details.",
+            "type": ["Full Stack"],
+            "tech": [],
+            "resources": [
+                {
+                    "name": "Gist",
+                    "url": "https://gist.github.com/" 
+                }
+            ]
         },
         {
             "id": 3,
-            "name": "Four",
-            "desc": "Because why not a fourth"
+            "name": "College Scoreboard",
+            "description": "An application that allows users to view the top ranked colleges within a geographical area. Incorporate a map API like the one below for an extra challenge.",
+            "type": ["Front End"],
+            "tech": ["API"],
+            "resources": [
+                {
+                    "name": "College data",
+                    "url": "https://catalog.data.gov/dataset/college-scorecard"
+                },
+                {
+                    "name": "Mapbox",
+                    "url": "https://www.mapbox.com/"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Petfinder Application",
+            "description": "An application that allows users to access data from the PetFinder API (shown below).",
+            "type": ["Front End", "Full Stack"],
+            "tech": ["API"],
+            "resources": [
+                {
+                    "name": "Petfinder API",
+                    "url": "https://www.petfinder.com/developers/api-docs"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Weather Logger",
+            "description": "An application that allows users to log the current weather, as well as view historical data.",
+            "type": ["Full Stack"],
+            "tech": ["API"],
+            "resources": [
+                {
+                    "name": "Weather Service API",
+                    "url": "https://www.ncdc.noaa.gov/cdo-web/webservices/v2"
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "name": "OAuth Login",
+            "description": "Create a user flow using OAuth 2.0. This could be helpful with reuse in future projects requiring authentication.",
+            "type": ["Full Stack"],
+            "tech": ["API","oAuth"],
+            "resources": [
+                {
+                    "name": "OAuth",
+                    "url": "https://oauth.net/2/"
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "name": "My CRUD Site",
+            "description": "An application that allows users to use each of the four CRUD operations (Create, Read, Update, Delete).",
+            "type": ["Full Stack"],
+            "tech": [],
+            "resources": [
+                {
+                    "name": "What is CRUD?",
+                    "url": "https://www.freecodecamp.org/news/crud-operations-explained/"
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "name": "Editor Portal",
+            "description": "An application that allows users to submit work for review or feedback, in the vein of an author/journalist to their editor.",
+            "type": ["Full Stack"],
+            "tech": [],
+            "resources": []
+        },
+        {
+            "id": 9,
+            "name": "Blog",
+            "description": "An application that allows users to add blog posts to a page where they are publicly available. Use a third party CMS for an additional challenge.",
+            "type": ["Full Stack"],
+            "tech": ["API"],
+            "resources": [
+                {
+                    "name": "15 Best CMS Platforms in 2022",
+                    "url": "https://www.wpbeginner.com/showcase/best-cms-platforms-compared/"
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "name": "Pinterest Clone",
+            "description": "An application that operates as a clone of Pinterest.",
+            "type": ["Full Stack"],
+            "tech": [],
+            "resources": []
+        },
+        {
+            "id": 11,
+            "name": "Restaurant Application",
+            "description": "An application that allows users to handle basic restaurant operations. Table booking and remote ordering as just two possible functions your app can include.",
+            "type": ["Full Stack"],
+            "tech": [],
+            "resources": []
+        },
+        {
+            "id": 12,
+            "name": "School Management System",
+            "description": "An application that allows users to handle different aspects of school management. Class structures; financial management and resource allocation are all ideas you can include.",
+            "type": ["Full Stack"],
+            "tech": [],
+            "resources": []
+        },
+        {
+            "id": 13,
+            "name": "Project Management Tool",
+            "description": "An application that allows users to handle different aspects of project management. This could be designed with a developer end user in mind, or something completely different.",
+            "type": ["Full Stack"],
+            "tech": [],
+            "resources": []
+        },
+        {
+            "id": 14,
+            "name": "Musical Chat",
+            "description": "An application that allows users to chat with other people who share their musical tastes. Try incorporating the Spotify API for an extra challenge.",
+            "type": ["Full Stack"],
+            "tech": ["API"],
+            "resources": [
+                {
+                    "name": "Spotify API",
+                    "url": "https://developer.spotify.com/documentation/web-api/"
+                }
+            ]
+        },
+        {
+            "id": 15,
+            "name": "Pricing Component",
+            "description": "A design implementation challenge based off the pricing component linked below. Try using flexbox in your project and implement responsive design.",
+            "type": ["Design", "Front End"],
+            "tech": ["CSS","SASS/SCSS"],
+            "resources": [
+                {
+                    "name": "Pricing Component Design",
+                    "url": "https://medium.com/star-gazers/10-exciting-web-development-projects-for-your-portfolio-662768478263"
+                }
+            ]
+        },
+        {
+            "id": 16,
+            "name": "Landing Page Design",
+            "description": "A design implementation challenge from FrontendMentor.io. Navigate to the link below and take the challenge for free.",
+            "type": ["Front End"],
+            "tech": ["CSS","SASS/SCSS"],
+            "resources": [
+                {
+                    "name": "Frontend Mentor",
+                    "url": "https://www.frontendmentor.io/challenges/room-homepage-BtdBY_ENq"
+                }
+            ]
+        },
+        {
+            "id": 17,
+            "name": "Web Crawler Application",
+            "description": "An application that can crawl the web for the purpose of web indexing or gathering data.",
+            "type": ["Back End"],
+            "tech": [],
+            "resources": [
+                {
+                    "name": "Web Crawler Tutorial",
+                    "url": "https://blog.logrocket.com/node-js-web-scraping-tutorial/"
+                }
+            ]
         }
     ]
 }

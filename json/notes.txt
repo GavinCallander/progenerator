@@ -5,6 +5,12 @@ Generally, I plan in a tidy way. This usually means using my .gitignore file and
 between the world and my ramblings, however since I'm designing and creating an API that's for public consumption I figure that I 
 can use this file almost as the living development of a README so that anyone can see the process that I (rightly or wrongly) go
 through to get to the finish line. 
+-------------------------
+Project Gathering Credits
+-------------------------
+https://gist.github.com/MWins/41c6fec2122dd47fdfaca31924647499
+https://devdevshow.com/backend-project-ideas-for-beginners-portfolio/
+https://medium.com/star-gazers/10-exciting-web-development-projects-for-your-portfolio-662768478263
 ------------------
 JSON Object Design
 ------------------
@@ -14,10 +20,11 @@ name: str;
 description: str;
 
 Secondary: Data likely to be used in filtering of projects (see stretch goals in todo)
+           These data will only be visible on the front end where applicable
 type: str; <------- front end; full stack etc.
 tech: str; <------- JS; React; SASS etc.
 
-Extras: Ancilliary pieces that either form the basis of or provide support for a given project
+Resources: Ancilliary pieces that either form the basis of or provide support for a given project
 api: {name: str; url: str}; 
 imageSite: {name: str; url: str}; 
 exampleSite: {name: str, url: str};
@@ -25,3 +32,20 @@ library: {name: str, url: str};
 tutorial: {name: str, url: str};
 article: {name: str, url: str};
 
+----------------------------------
+Visualization of Viewport (mobile)
+----------------------------------
+header
+    Logo
+main
+    Project Name
+    Project Desc
+    "          "
+    "          "
+    "          "
+
+    Resources
+    "       "
+main
+footer
+-----------------------------------
