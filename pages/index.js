@@ -1,6 +1,8 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import useSWR from 'swr';
+
+import styles from './Pages.module.scss';
 
 const fetcher = (url) => fetch(url).then(res => res.json());
 
@@ -10,8 +12,21 @@ export default function Index() {
   // this is useful in preventing duplicate suggestions as new generations can be checked against previous ones
   // with duplicates being rejected
   const [generatedProjects, setGeneratedProjects] = useState([]);
-  // define currentProject for later use
+
+  // define non-state variables
   let currentProject = {...generatedProjects[generatedProjects.length-1]};
+  let resourcesLinks;
+  let displayClass = "";
+  let headerClass = "";
+  let mainClass = "";
+  let taglineClass = "";
+  // once generatedProjects is populated, change styling to allow for information display
+  if (generatedProjects.length) {
+    displayClass = styles.display;
+    headerClass = styles.header;
+    mainClass = styles.main;
+    taglineClass = styles.tagline;
+  }
 
   // function to generate a single project from the fetched data
   const generateProject = () => {
@@ -39,21 +54,46 @@ export default function Index() {
     };
   };
 
-  const { data, error } = useSWR('/api/staticdata', fetcher);
+  if (currentProject.resources) {
+    resourcesLinks = currentProject.resources.map((resource, i) => {
+      return (
+        <a className={styles.resourceLink} href={resource.url} key={i}>{resource.name};</a>
+      );
+    });
+  } else {
+    resourcesLinks = "";
+  };
 
+  // effect hook to handle content change
+  // useEffect(() => { 
+  //     if (currentProject.resources) {
+  //       resourcesLinks = currentProject.resources.map((resource, i) => {
+  //         return (
+  //           <a className={styles.resourceLink} href={resource.url} key={i}>{resource.name}</a>
+  //         )
+  //       })
+  //     }
+  //   }, []);
+      
+  // call the fetcher function from above and return the projects data
+  const { data, error } = useSWR('/api/staticdata', fetcher);
+  // error handling etc
   if (error) return <div>Failed to load</div>;
 
   if (!data) return <div>Loading</div>;
 
   return (
     <div>
-      <header>
+      <header className={headerClass}>
         <h1>Progenerator</h1>
-        <p>Generate your next project idea now</p>
+        <p className={taglineClass}>Generate your next project idea now</p>
       </header>
-      <main>
-        <p>{currentProject.name}</p>
-        <p>{currentProject.desc}</p>
+      <main className={mainClass}>
+        <div className={displayClass}>
+          <p>{currentProject.name}</p>
+          <p>{currentProject.description}</p>
+          { resourcesLinks }
+        </div>
         <button onClick={generateProject}>Generate</button>
       </main>
       <footer>

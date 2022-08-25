@@ -3,7 +3,11 @@ html, body {
     padding: 0;
 }
 body {
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
 }
 
 footer, header, main {
@@ -16,9 +20,10 @@ footer {
     height: 10vh;
 }
 header, main {
-    padding: 0 1rem;
+    padding: 1rem;
     flex-direction: column;
     height: 45vh;
+    transition: height .3s;
 }
 header {
     justify-content: flex-end;

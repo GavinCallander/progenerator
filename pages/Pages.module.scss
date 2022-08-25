@@ -1,0 +1,21 @@
+.display {
+    padding: 1rem;
+    width: 90%;
+    border: 1px solid black;
+}
+.header {
+    height: 10vh;
+    justify-content: center;
+}
+.main {
+    height: 80vh;
+    justify-content: space-around;
+    align-items: center;
+}
+.resourceLink {
+    padding: .3rem;
+    border: 1px solid black;
+}
+.tagline {
+    display: none;
+}
