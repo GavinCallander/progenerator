@@ -57,23 +57,12 @@ export default function Index() {
   if (currentProject.resources) {
     resourcesLinks = currentProject.resources.map((resource, i) => {
       return (
-        <a className={styles.resourceLink} href={resource.url} key={i}>{resource.name};</a>
+        <a className={styles.resourceLink} href={resource.url} key={i}>{resource.name}</a>
       );
     });
   } else {
     resourcesLinks = "";
   };
-
-  // effect hook to handle content change
-  // useEffect(() => { 
-  //     if (currentProject.resources) {
-  //       resourcesLinks = currentProject.resources.map((resource, i) => {
-  //         return (
-  //           <a className={styles.resourceLink} href={resource.url} key={i}>{resource.name}</a>
-  //         )
-  //       })
-  //     }
-  //   }, []);
       
   // call the fetcher function from above and return the projects data
   const { data, error } = useSWR('/api/staticdata', fetcher);
