@@ -1,3 +1,6 @@
+@import './base/palette';
+@import './base/typography';
+
 html, body {
     margin: 0;
     padding: 0;
@@ -8,6 +11,8 @@ body {
     justify-content: flex-start;
     align-items: center;
     height: 100vh;
+    background-color: black;
+    color: limegreen;
 }
 
 footer, header, main {
