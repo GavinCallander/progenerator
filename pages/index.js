@@ -16,17 +16,6 @@ export default function Index() {
   // define non-state variables
   let currentProject = {...generatedProjects[generatedProjects.length-1]};
   let resourcesLinks;
-  let displayClass = "";
-  let headerClass = "";
-  let mainClass = "";
-  let taglineClass = "";
-  // once generatedProjects is populated, change styling to allow for information display
-  if (generatedProjects.length) {
-    displayClass = styles.display;
-    headerClass = styles.header;
-    mainClass = styles.main;
-    taglineClass = styles.tagline;
-  }
 
   // function to generate a single project from the fetched data
   const generateProject = () => {
@@ -34,7 +23,6 @@ export default function Index() {
     // should give a user the option to begin again or something i.e. empty generatedProjects and start from scratch
     if (generatedProjects.length === data.projects.length) {
       // do the above; will hold on actually coding as this may feed into filtering in the future
-      console.log('No more projects');
       return;
     }
     // if this is not the case, we can randomly choose a project
@@ -53,7 +41,8 @@ export default function Index() {
       };
     };
   };
-
+  
+  // conditionally render links for any resources associated with a given project
   if (currentProject.resources) {
     resourcesLinks = currentProject.resources.map((resource, i) => {
       return (
@@ -63,7 +52,7 @@ export default function Index() {
   } else {
     resourcesLinks = "";
   };
-      
+
   // call the fetcher function from above and return the projects data
   const { data, error } = useSWR('/api/staticdata', fetcher);
   // error handling etc
@@ -73,17 +62,21 @@ export default function Index() {
 
   return (
     <div>
-      <header className={headerClass}>
+      <header>
         <h1>Progenerator</h1>
-        <p className={taglineClass}>Generate your next project idea now</p>
       </header>
-      <main className={mainClass}>
-        <div className={displayClass}>
-          <p>{currentProject.name}</p>
-          <p>{currentProject.description}</p>
-          { resourcesLinks }
+      <main>
+        <div className={styles.generateDisplay}>
+          <p>Generate your next project now</p>
+          <button onClick={generateProject}>Generate</button>
         </div>
-        <button onClick={generateProject}>Generate</button>
+        <div className={styles.projectDisplay}>
+          <h3>{currentProject.name}</h3>
+          <p>{currentProject.description}</p>
+          <div className={styles.linksBox}>
+            { resourcesLinks }
+          </div>
+        </div>
       </main>
       <footer>
         <p>All rights reserved GCWebDev 2022</p>

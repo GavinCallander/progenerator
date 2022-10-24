@@ -1,21 +1,20 @@
-.display {
-    padding: 1rem;
-    width: 90%;
-    border: 1px solid black;
+.generateDisplay {
 }
-.header {
-    height: 10vh;
+.projectDisplay {
+}
+
+.linksBox {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
-}
-.main {
-    height: 80vh;
-    justify-content: space-around;
     align-items: center;
+    width: 100%;
 }
 .resourceLink {
-    padding: .3rem;
-    border: 1px solid black;
-}
-.tagline {
-    display: none;
+    margin: 0 0.2rem;
+    padding: 0.5rem;
+    color: white;
+    border-radius: 5px;
+    &:hover {
+    }
 }

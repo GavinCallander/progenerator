@@ -4,42 +4,51 @@
 html, body {
     margin: 0;
     padding: 0;
-}
-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    height: 100vh;
-    background-color: black;
-    color: limegreen;
+    background-color: $light;
 }
 
 footer, header, main {
     display: flex;
     width: 100vw;
 }
-footer {
+footer, header {
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 10vh;
-}
-header, main {
-    padding: 1rem;
-    flex-direction: column;
-    height: 45vh;
-    transition: height .3s;
-}
-header {
-    justify-content: flex-end;
-}
-main {
-    justify-content: flex-start;
 }
 
-button {
-    width: 50%;
+footer {
+    height: 5vh;
+}
+footer p {
+    font-size: 0.8rem;
+}
+
+header {
+    height: 10vh;
+}
+
+main {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+}
+main div {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 45%;
+    text-align: center;
+}
+main button {
+    padding: 1rem;
+    border: none;
     font-size: 1.5rem;
+    cursor: pointer;
 }
 
 * {
