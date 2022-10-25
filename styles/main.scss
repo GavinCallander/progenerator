@@ -1,15 +1,29 @@
 @import './base/palette';
-@import './base/typography';
+@import './utils/mixins';
 
 html, body {
     margin: 0;
     padding: 0;
-    background-color: $light;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../public/img/interlaced.png');
+    color: $dark;
+    font-family: helvetica;
+    @include responsive(xxl) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
 }
 
 footer, header, main {
     display: flex;
     width: 100vw;
+    @include responsive(xxl) {
+        width: 50vw;
+    }
 }
 footer, header {
     flex-direction: row;
@@ -45,10 +59,19 @@ main div {
     text-align: center;
 }
 main button {
-    padding: 1rem;
+    padding: 0.5rem;
+    background-color: $accent-dark;
+    color: $light;
     border: none;
-    font-size: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 0 2px 1px $accent-mid;
+    font-size: 1.2rem;
     cursor: pointer;
+    @include responsive(xxl) {
+        &:hover {
+            background-color: $accent-mid;
+        }
+    }
 }
 
 * {

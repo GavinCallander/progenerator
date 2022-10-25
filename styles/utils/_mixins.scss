@@ -1,0 +1,21 @@
+// map and mixin for responsive design
+$breakpoints: (
+    // base case is development for iPhone SE and similar
+    'sm': ( min-width: 389px ), // 1px smaller than the base of iPhone 12 Pro (standard larger phone)
+    'md': ( min-width: 539px ), // 1px smaller than the Surface Duo (smallish size for a modern tablet)
+    'lg': ( min-width: 767px ), // 1px smaller than iPad Mini (average sized tablet),
+    'xl': ( min-width: 911px ), // 1px smaller than the Surface Pro 7 (larger tablet/smaller laptop)
+    'xxl': (min-width: 1200px) // max width I'm considering for this version
+) !default;
+
+@mixin responsive($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media #{inspect(map-get($breakpoints, $breakpoint))} {
+            @content;
+        }
+    }
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}. "
+            + "Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+};

@@ -46,7 +46,7 @@ export default function Index() {
   if (currentProject.resources) {
     resourcesLinks = currentProject.resources.map((resource, i) => {
       return (
-        <a className={styles.resourceLink} href={resource.url} key={i}>{resource.name}</a>
+        <a className={styles.resourceLink} href={resource.url} key={i} rel="noreferrer" target="_blank">{resource.name}</a>
       );
     });
   } else {
@@ -66,16 +66,16 @@ export default function Index() {
         <h1>Progenerator</h1>
       </header>
       <main>
-        <div className={styles.generateDisplay}>
-          <p>Generate your next project now</p>
-          <button onClick={generateProject}>Generate</button>
-        </div>
-        <div className={styles.projectDisplay}>
+        <div>
           <h3>{currentProject.name}</h3>
           <p>{currentProject.description}</p>
           <div className={styles.linksBox}>
             { resourcesLinks }
           </div>
+        </div>
+        <div>
+          <p>Generate your next project now</p>
+          <button onClick={generateProject}>Generate</button>
         </div>
       </main>
       <footer>

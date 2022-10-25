@@ -1,7 +1,4 @@
-.generateDisplay {
-}
-.projectDisplay {
-}
+@import '../styles/base/palette';
 
 .linksBox {
     display: flex;
@@ -13,8 +10,11 @@
 .resourceLink {
     margin: 0 0.2rem;
     padding: 0.5rem;
-    color: white;
+    background-color: $accent-dark;
+    color: $light;
     border-radius: 5px;
+    box-shadow: 0 0 3px 1px $accent-mid;
     &:hover {
+        background-color: $accent-mid;
     }
 }
