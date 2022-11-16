@@ -47,6 +47,9 @@ main {
     justify-content: center;
     align-items: center;
     height: 85vh;
+    @include responsive(xxl) {
+        flex-direction: row-reverse;
+    }
 }
 main div {
     padding: 1rem;
@@ -57,6 +60,9 @@ main div {
     width: 90%;
     height: 45%;
     text-align: center;
+    @include responsive(xxl) {
+        margin: 0 2rem;
+    }
 }
 main button {
     padding: 0.5rem;
